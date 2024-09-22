@@ -30,9 +30,12 @@ export default function ChatBox() {
 
   const { inView, ref: chatTop } = useInView();
 
+  console.log(chatTop);
+
   const chatBoxRef = useRef<HTMLElement>();
 
   useEffect(() => {
+    // auto scroll down when new message received if page is scrolled down already
     if (
       !chatBoxRef.current ||
       chatBoxRef.current?.scrollHeight - chatBoxRef.current?.scrollTop ===

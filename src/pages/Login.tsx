@@ -17,7 +17,6 @@ export default function Login() {
   }, [isLoadingUser, user, navigate]);
 
   function loginFunc(data: loginObject) {
-    console.log(data);
     login(data);
   }
 

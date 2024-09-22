@@ -43,7 +43,7 @@ export default function Contact({
 
   return (
     <div
-      className={`flex gap-6 h-20 w-full items-center p-4  transition-colors ${
+      className={`flex gap-6 h-20 w-full items-center p-4  transition-colors overflow-hidden    ${
         isActive
           ? " bg-opacity-50 bg-main_dark "
           : "hover:bg-opacity-20 hover:bg-main_dark cursor-pointer"

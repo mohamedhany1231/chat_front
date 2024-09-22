@@ -53,12 +53,12 @@ export function AddUserToGroup({ groupId }) {
         </h3>
         {contacts?.map((con) => {
           if (con.type === "group") return;
-          // if (
-          //   group?.contact?.filter(
-          //     (groupCon) => groupCon.userId == con.contactId
-          //   ).length > 0
-          // )
-          //   return <p className=" text-2xl ">no contacts to add</p>;
+          if (
+            group?.contact?.filter(
+              (groupCon) => groupCon.userId == con.contactId
+            ).length > 0
+          )
+            return;
           return (
             <div className="  flex gap-2  sm:gap-8 items-center   ">
               <img

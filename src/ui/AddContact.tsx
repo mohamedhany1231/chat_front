@@ -20,7 +20,6 @@ export default function AddContact() {
     setAddType("");
   };
 
-  console.log("show menu", showMenu, addType);
   return (
     <div className=" relative h-10">
       {!showMenu &&

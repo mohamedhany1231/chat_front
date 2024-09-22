@@ -17,23 +17,17 @@ export default function VideoCall() {
       path: "/call",
     });
 
-    console.log("hi im", clientPeer.id);
-
-    clientPeer.on("connection", (data) => {
-      console.log("some 1 connected", data);
-    });
+    // clientPeer.on("connection", (data) => {
+    //   console.log("some 1 connected", data);
+    // });
 
     function callId(id: string, stream: MediaStream) {
-      console.log("calling", id);
-      console.log(clientPeer);
       const call = clientPeer.call(id, stream);
 
       if (call) {
         let streamId: string;
 
         call.on("stream", (userStream) => {
-          console.log("received stream", userStream.id);
-
           if (streamId !== userStream.id) {
             streamId = userStream.id;
             setStreams((strs) => [...strs, userStream]);

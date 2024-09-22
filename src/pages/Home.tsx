@@ -15,9 +15,9 @@ export default function Home() {
   return (
     <ChatContext.Provider value={{ activeChat, setActiveChat }}>
       <div className=" h-[100vh] bg-bg_darker text-white  ">
-        <div className="flex  xl:grid xl:grid-cols-[1fr_3fr] h-full divide-x-2 divide-slate-800 divide-opacity-40">
+        <div className="   flex  xl:grid xl:grid-cols-[1fr_3fr] h-full divide-x-2 divide-slate-800 divide-opacity-40">
           <Contacts />
-          <div className=" w-[100vw] xl:w-auto  flex-grow">
+          <div className=" overflow-scroll w-[100vw] xl:w-auto  flex-grow">
             <Outlet />
           </div>
         </div>

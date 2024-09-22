@@ -42,7 +42,7 @@ export default function Contacts() {
         },
       }}
       variants={variants}
-      className=" absolute xl:relative h-full   xl:!translate-x-0 z-20"
+      className="absolute xl:relative h-full    xl:!translate-x-0 z-20"
     >
       <button
         onClick={() => setIsOpen((o) => !o)}

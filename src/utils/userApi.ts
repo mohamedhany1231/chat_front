@@ -6,7 +6,6 @@ const axiosInstance = axios.create({
 });
 
 export async function login({ email, password }: loginObject): Promise<void> {
-  console.log(email, password);
   await axiosInstance.post("/login", { email, password });
 }
 

@@ -23,7 +23,6 @@ export function Message({
   showMessageInfo,
   refChatTop,
 }: messageProps) {
-  console.log(showDate && message);
   const { user: me, isLoading } = useUserData();
   const { user, isLoading: isLoadingUser } = useUser(message.from);
   const userIsSender = message.from === me.id;
